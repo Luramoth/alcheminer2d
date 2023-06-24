@@ -1,20 +1,23 @@
-#include <raylib.h>
+#include <cstdio>
 
-const int WIDTH = 800;
-const int HEIGHT = 450;
+#include "app.h"
 
 int main() {
-    InitWindow(WIDTH, HEIGHT, "Alcheminer");
+    App app = App::getInstance();
 
-    while (!WindowShouldClose()) {
-        BeginDrawing();
-
-            ClearBackground(RAYWHITE);
-
-        EndDrawing();
+    if (app.StartApp() > 0){
+        fprintf(stderr, "Error starting app: %s", app.errMsg);
+        return 1;
     }
 
-    CloseWindow();
+    if (app.UpdateLoop() > 0){
+        fprintf(stderr, "Error during runtime: %s", app.errMsg);
+    }
+
+    if (app.Cleanup() > 0){
+        fprintf(stderr, "Error cleaning up: %s", app.errMsg);
+        return 1;
+    }
 
     return 0;
 }

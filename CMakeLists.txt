@@ -23,8 +23,6 @@ if (NOT raylib_FOUND) # If there's none, fetch and build raylib
     endif()
 endif()
 
-set(CMAKE_CXX_STANDARD 17)
-
 add_executable(${PROJECT_NAME} src/main.cpp
         src/app.cpp
         src/app.h)
