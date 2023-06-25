@@ -45,7 +45,7 @@ if (APPLE)
     target_link_libraries(${PROJECT_NAME} "-framework OpenGL")
 endif()
 
-# if in release have the assets path be relative to the executable, otherwise to the dev mechine
+# if in release have the assets path be relative to the executable, otherwise to the dev machine
 if (CMAKE_BUILD_TYPE EQUAL "RELEASE")
     target_compile_definitions(${PROJECT_NAME} PUBLIC ASSETS="./assets/")
 else ()
