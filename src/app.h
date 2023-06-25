@@ -9,6 +9,8 @@
 
 #include <raylib.h>
 
+#include "assetMan/Sprite.h"
+
 class App {
 public:
 	const int WIDTH = 800;
@@ -16,7 +18,7 @@ public:
 
 	char errMsg[255];
 
-	Texture2D hi;
+	AssetMan::Sprite hiSprite;
 
 	// singleton grabber function
 	static App& getInstance() {
@@ -26,7 +28,7 @@ public:
 
 	[[nodiscard]] int StartApp();
 
-	[[nodiscard]] int UpdateLoop ();
+	[[nodiscard]] int UpdateLoop();
 
 	[[nodiscard]] int Cleanup();
 

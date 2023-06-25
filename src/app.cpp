@@ -6,7 +6,7 @@
 int App::StartApp() {
 	InitWindow(WIDTH, HEIGHT, "Alcheminer");
 
-	hi = LoadTexture("../assets/DEBUG_placeholder.png");
+	hiSprite.LoadAsset("DEBUG_placeholder.png");
 
 	return 0;
 }
@@ -17,7 +17,7 @@ int App::UpdateLoop() {
 
 			ClearBackground(RAYWHITE);
 
-			DrawTexture(hi, 0, 0, WHITE);
+			DrawTexture(hiSprite.texture, 0, 0, WHITE);
 
 		EndDrawing();
 	}
@@ -29,7 +29,7 @@ int App::Cleanup() {
 
 	CloseWindow();
 
-	UnloadTexture(hi);
+	hiSprite.UnLoadAsset();
 
 	return 0;
 }

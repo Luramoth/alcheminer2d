@@ -25,7 +25,10 @@ endif()
 
 add_executable(${PROJECT_NAME} src/main.cpp
         src/app.cpp
-        src/app.h)
+        src/app.h
+        src/assetMan/Asset.h
+        src/assetMan/Sprite.cpp
+        src/assetMan/Sprite.h)
 
 target_link_libraries(${PROJECT_NAME} raylib)
 
@@ -44,7 +47,7 @@ endif()
 
 # if in release have the assets path be relative to the executable, otherwise to the dev mechine
 if (CMAKE_BUILD_TYPE EQUAL "RELEASE")
-    target_compile_definitions(${PROJECT_NAME} PUBLIC ASSETS="./assets")
+    target_compile_definitions(${PROJECT_NAME} PUBLIC ASSETS="./assets/")
 else ()
     target_compile_definitions(${PROJECT_NAME} PUBLIC ASSETS="${CMAKE_CURRENT_SOURCE_DIR}/assets/")
 endif ()
