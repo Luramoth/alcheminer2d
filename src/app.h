@@ -7,28 +7,31 @@
 
 #include <string>
 
+#include <raylib.h>
 
 class App {
 public:
-    const int WIDTH = 800;
-    const int HEIGHT = 450;
+	const int WIDTH = 800;
+	const int HEIGHT = 450;
 
-    char errMsg[];
+	char errMsg[255];
 
-    // singleton grabber function
-    static App& getInstance() {
-        static App instance;
-        return instance;
-    }
+	Texture2D hi;
 
-    [[nodiscard]] int StartApp();
+	// singleton grabber function
+	static App& getInstance() {
+		static App instance;
+		return instance;
+	}
 
-    [[nodiscard]] int UpdateLoop ();
+	[[nodiscard]] int StartApp();
 
-    [[nodiscard]] int Cleanup();
+	[[nodiscard]] int UpdateLoop ();
+
+	[[nodiscard]] int Cleanup();
 
 private:
-    App() {}
+	App() {}
 };
 
 

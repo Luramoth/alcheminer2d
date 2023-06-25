@@ -1,31 +1,35 @@
 //
 // Created by kayla on 6/24/23.
 //
-#include <raylib.h>
-
 #include "app.h"
 
 int App::StartApp() {
-    InitWindow(WIDTH, HEIGHT, "Alcheminer");
+	InitWindow(WIDTH, HEIGHT, "Alcheminer");
 
-    return 0;
+	hi = LoadTexture("../assets/DEBUG_placeholder.png");
+
+	return 0;
 }
 
 int App::UpdateLoop() {
-    while (!WindowShouldClose()) {
-        BeginDrawing();
+	while (!WindowShouldClose()) {
+		BeginDrawing();
 
-        ClearBackground(RAYWHITE);
+			ClearBackground(RAYWHITE);
 
-        EndDrawing();
-    }
+			DrawTexture(hi, 0, 0, WHITE);
 
-    return 0;
+		EndDrawing();
+	}
+
+	return 0;
 }
 
 int App::Cleanup() {
 
-    CloseWindow();
+	CloseWindow();
 
-    return 0;
+	UnloadTexture(hi);
+
+	return 0;
 }
