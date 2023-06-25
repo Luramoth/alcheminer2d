@@ -5,11 +5,9 @@
 #ifndef ALCHEMINER2D_APP_H
 #define ALCHEMINER2D_APP_H
 
-#include <string>
+#include "Common.h"
 
-#include <raylib.h>
-
-#include "assetMan/Sprite.h"
+#include "AssetMan/Sprite.h"
 
 class App {
 public:

@@ -1,6 +1,6 @@
 #include <cstdio>
 
-#include "app.h"
+#include "App.h"
 
 int main() {
 	App app = App::getInstance();

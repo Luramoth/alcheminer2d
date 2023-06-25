@@ -24,11 +24,22 @@ if (NOT raylib_FOUND) # If there's none, fetch and build raylib
 endif()
 
 add_executable(${PROJECT_NAME} src/main.cpp
-        src/app.cpp
-        src/app.h
-        src/assetMan/Asset.h
-        src/assetMan/Sprite.cpp
-        src/assetMan/Sprite.h)
+        src/App.cpp
+        src/App.h
+        src/AssetMan/Asset.h
+        src/AssetMan/Sprite.cpp
+        src/AssetMan/Sprite.h
+        src/EntityMan/Transform2D.cpp
+        src/EntityMan/Transform2D.h
+        src/EntityMan/Entity2D.cpp
+        src/EntityMan/Entity2D.h
+        src/EntityMan/ComponentMan/Component.cpp
+        src/EntityMan/ComponentMan/Component.h
+        src/Common.h
+        src/EntityMan/Entity.h
+)
+
+target_precompile_headers(${PROJECT_NAME} PRIVATE src/Common.h)
 
 target_link_libraries(${PROJECT_NAME} raylib)
 

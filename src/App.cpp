@@ -1,7 +1,7 @@
 //
 // Created by kayla on 6/24/23.
 //
-#include "app.h"
+#include "App.h"
 
 int App::StartApp() {
 	InitWindow(WIDTH, HEIGHT, "Alcheminer");
@@ -11,7 +11,7 @@ int App::StartApp() {
 	return 0;
 }
 
-int App::UpdateLoop() {
+int App::UpdateLoop() { // NOLINT(*-make-member-function-const)
 	while (!WindowShouldClose()) {
 		BeginDrawing();
 
