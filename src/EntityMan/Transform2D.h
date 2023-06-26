@@ -5,7 +5,7 @@
 #ifndef ALCHEMINER2D_TRANSFORM2D_H
 #define ALCHEMINER2D_TRANSFORM2D_H
 
-#include "../Common.h"
+#include <Common.h>
 
 struct transform2D {
 	Vector2 GPosition;

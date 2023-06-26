@@ -35,11 +35,11 @@ add_executable(${PROJECT_NAME} src/main.cpp
         src/EntityMan/Entity2D.h
         src/EntityMan/ComponentMan/Component.cpp
         src/EntityMan/ComponentMan/Component.h
-        src/Common.h
         src/EntityMan/Entity.h
 )
 
-target_precompile_headers(${PROJECT_NAME} PRIVATE src/Common.h)
+target_include_directories(${PROJECT_NAME} PRIVATE "./commonH")
+target_precompile_headers(${PROJECT_NAME} PRIVATE "commonH/Common.h")
 
 target_link_libraries(${PROJECT_NAME} raylib)
 

@@ -5,7 +5,7 @@
 #ifndef ALCHEMINER2D_COMMON_H
 #define ALCHEMINER2D_COMMON_H
 
-#include <raylib.h>
+#include "raylib.h"
 #include <string>
 #include <array>
 #include <list>

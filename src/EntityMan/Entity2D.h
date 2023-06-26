@@ -8,8 +8,7 @@
 #include "Transform2D.h"
 #include "ComponentMan/Component.h"
 
-// std
-#include "../Common.h"
+#include <Common.h>
 
 namespace EntityMan {
 
