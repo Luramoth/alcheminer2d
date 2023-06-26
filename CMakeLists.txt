@@ -1,4 +1,5 @@
-cmake_minimum_required(VERSION 3.25)
+# Can be set to 3.11 if you dont care about precompiled headers
+cmake_minimum_required(VERSION 3.16)
 project(alcheminer2d)
 
 # Generate compile_commands.json
