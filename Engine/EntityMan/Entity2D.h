@@ -6,15 +6,15 @@
 #define ALCHEMINER2D_ENTITY2D_H
 
 #include "Transform2D.h"
-#include "ComponentMan/Component.h"
+#include "EntityMan/Entity.h"
 
 #include "CommonPCH.h"
 
 namespace EntityMan {
 
 	class Entity2D : Entity {
+	public:
 		Transform2D Transform;
-		std::list<ComponentMan::Component> Components;
 	};
 
 } // EntityMan

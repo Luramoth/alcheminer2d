@@ -5,9 +5,15 @@
 #ifndef ALCHEMINER2D_ENTITY_H
 #define ALCHEMINER2D_ENTITY_H
 
+#include "ComponentMan/Component.h"
+
 namespace EntityMan {
 
-	class Entity {};
+	class Entity {
+	public:
+		std::list<ComponentMan::Component> Components;
+		virtual void Tick();
+	};
 
 }// EntityMan
 
