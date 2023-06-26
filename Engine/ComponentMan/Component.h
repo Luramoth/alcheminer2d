@@ -7,7 +7,9 @@
 
 namespace ComponentMan {
 
-	struct Component {};
+	struct Component {
+		int ID;
+	};
 
 } // ComponentMan
 
