@@ -7,8 +7,6 @@
 
 #include <Common.h>
 
-#include <raylib.h>
-
 namespace AssetMan {
 
 	class Asset {
