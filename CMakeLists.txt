@@ -34,8 +34,7 @@ add_executable(${PROJECT_NAME} src/main.cpp
         Engine/EntityMan/Transform2D.h
         Engine/EntityMan/Entity2D.cpp
         Engine/EntityMan/Entity2D.h
-        Engine/ComponentMan/Component.cpp
-        Engine/ComponentMan/Component.h
+		Engine/ComponentMan/Component.h
         Engine/EntityMan/Entity.h
 )
 
