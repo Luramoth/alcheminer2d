@@ -5,7 +5,7 @@
 #ifndef ALCHEMINER2D_COMPONENT_H
 #define ALCHEMINER2D_COMPONENT_H
 
-#include "../Entity.h"
+#include "EntityMan/Entity.h"
 
 namespace ComponentMan {
 

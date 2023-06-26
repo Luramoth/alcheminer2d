@@ -26,20 +26,20 @@ endif()
 add_executable(${PROJECT_NAME} src/main.cpp
         src/App.cpp
         src/App.h
-        src/AssetMan/Asset.h
-        src/AssetMan/Sprite.cpp
-        src/AssetMan/Sprite.h
-        src/EntityMan/Transform2D.cpp
-        src/EntityMan/Transform2D.h
-        src/EntityMan/Entity2D.cpp
-        src/EntityMan/Entity2D.h
-        src/EntityMan/ComponentMan/Component.cpp
-        src/EntityMan/ComponentMan/Component.h
-        src/EntityMan/Entity.h
+        Engine/AssetMan/Asset.h
+        Engine/AssetMan/Sprite.cpp
+        Engine/AssetMan/Sprite.h
+        Engine/EntityMan/Transform2D.cpp
+        Engine/EntityMan/Transform2D.h
+        Engine/EntityMan/Entity2D.cpp
+        Engine/EntityMan/Entity2D.h
+        Engine/ComponentMan/Component.cpp
+        Engine/ComponentMan/Component.h
+        Engine/EntityMan/Entity.h
 )
 
-target_include_directories(${PROJECT_NAME} PRIVATE "./commonH")
-target_precompile_headers(${PROJECT_NAME} PRIVATE "commonH/Common.h")
+target_include_directories(${PROJECT_NAME} PRIVATE "Engine")
+target_precompile_headers(${PROJECT_NAME} PRIVATE "Engine/CommonPCH.h")
 
 target_link_libraries(${PROJECT_NAME} raylib)
 
